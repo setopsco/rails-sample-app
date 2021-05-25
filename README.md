@@ -27,10 +27,12 @@ Then install the needed packages (while skipping any Ruby gems needed only in pr
 
 ```
 $ yarn add jquery@3.5.1 bootstrap@3.4.1
-$ bundle install --without production
+$ gem install bundler -v 2.2.17
+$ bundle _2.2.17_ config set --local without 'production'
+$ bundle _2.2.17_ install
 ```
 
-(If you run into any installation issues or missing dependencies, refer to the [first chapter](https://www.learnenough.com/ruby-on-rails-6th-edition-tutorial/beginning) of the tutorial for details.)
+(If you run into any installation issues or missing dependencies, refer to the [first chapter](https://www.railstutorial.org/book/beginning) of the tutorial for details.)
 
 Next, migrate the database:
 
@@ -64,7 +66,7 @@ To deploy this version of the app, you’ll need to create a new Heroku applicat
 ```
 $ heroku create
 $ git checkout updating-users
-$ git push heroku updating-users:master
+$ git push heroku updating-users:main
 $ heroku run rails db:migrate
 $ heroku run rails db:seed
 ```
@@ -106,4 +108,4 @@ $ git checkout sign-up
 
 Experience shows that comparing code with the reference app is often helpful for debugging errors and tracking down discrepancies. For additional assistance with any issues in the tutorial, please consult the [Rails Tutorial Help page](https://www.railstutorial.org/help).
 
-Suspected errors, typos, and bugs can be emailed to <help@learnenough.com>. All such reports are gratefully received, but please double-check with the [online version of the tutorial](https://www.railstutorial.org/book) and this reference app before submitting.
+Suspected errors, typos, and bugs can be emailed to <support@learnenough.com>. All such reports are gratefully received, but please double-check with the [online version of the tutorial](https://www.railstutorial.org/book) and this reference app before submitting.
